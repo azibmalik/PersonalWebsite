@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azib Malik | Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Additional styles for homepage */
+        .animated-bg {
+            background: linear-gradient(-45deg, #4b2e83, #6a3fbd, #b7a57a, #d4c18f);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            background: white;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .btn-custom {
+            background: var(--gradient-primary);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(75, 46, 131, 0.4);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 9px 24px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-custom:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(75, 46, 131, 0.4);
+        }
+        
+        .hero-badge {
+            background: var(--gradient-secondary);
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(183, 165, 122, 0.3);
+        }
+        
+        .highlights-section {
+            background-color: #f9f9f9;
+            padding: 5rem 0;
+        }
+        
+        .skill-bubble {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--light-color);
+            color: var(--dark-color);
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-bubble:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .profile-img-animated {
+            transition: all 0.5s ease;
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .cta-section {
+            background: var(--gradient-primary);
+            padding: 4rem 0;
+            color: white;
+        }
+        
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+        
+        .btn-cta {
+            background: white;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-cta:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            color: var(--primary-color);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-icon:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Azib Malik</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Animated Background -->
+    <header class="hero-section animated-bg">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-text">
+                        <span class="hero-badge"><i class="fas fa-code me-2"></i>Computer Science Student</span>
+                        <h1 class="fw-bold display-4 text-white">Hello, I'm Azib Malik</h1>
+                        <h2 class="mb-4 text-white">Building the future through code</h2>
+                        <p class="lead mb-4 text-white">University of Washington, Paul G. Allen School of Computer Science & Engineering</p>
+                        <div class="d-flex gap-3">
+                            <a href="about.html" class="btn btn-custom">Learn About Me</a>
+                            <a href="resume.html" class="btn btn-outline-custom bg-white">View Resume</a>
+                        </div>
+                        
+                        <div class="social-icons mt-4">
+                            <a href="https://www.linkedin.com/in/azib-malik" class="social-icon" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/azibmalik" class="social-icon" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:amalik7@cs.washington.edu" class="social-icon">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="profile-img-container">
+                        <img src="ProfileImage.png" alt="Azib Malik" class="img-fluid rounded-circle profile-img-animated">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Introduction -->
+    <section class="intro-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center" data-aos="fade-up">
+                    <h3 class="section-title">Welcome to My Portfolio</h3>
+                    <div class="intro-card p-4">
+                        <p>Hello! I am a current sophomore student at the University of Washington Paul G. Allen School of Computer Science & Engineering, pursuing a B.S. in Computer Science with a Minor in Business.</p>
+                        <p>I am currently looking for a role as an Intern in the tech industry, primarily in software engineering. I have experience with Java Spring Boot, JavaScript, Python, and various frameworks and libraries.</p>
+                        <p>Feel free to explore my portfolio to learn more about my projects, skills, and experience. Thanks for visiting!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Highlights/Skills Section -->
+    <section class="highlights-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center">
+                    <h3 class="section-title" data-aos="fade-up">My Skills & Expertise</h3>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <span class="skill-bubble">Java</span>
+                        <span class="skill-bubble">Python</span>
+                        <span class="skill-bubble">JavaScript</span>
+                        <span class="skill-bubble">Spring Boot</span>
+                        <span class="skill-bubble">SQL</span>
+                        <span class="skill-bubble">React</span>
+                        <span class="skill-bubble">Node.js</span>
+                        <span class="skill-bubble">REST APIs</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="feature-card p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>Software Development</h4>
+                        <p>Building robust, scalable applications with modern technologies and best practices.</p>
+                        <a href="about.html" class="btn btn-outline-custom mt-3">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Data Analysis</h4>
+                        <p>Turning complex data into meaningful insights and actionable strategies.</p>
+                        <a href="about.html#projects" class="btn btn-outline-custom mt-3">View Projects</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Team Collaboration</h4>
+                        <p>Working effectively in diverse teams to deliver exceptional results.</p>
+                        <a href="resume.html" class="btn btn-outline-custom mt-3">See Experience</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Projects Carousel -->
+    <section class="projects-section py-5">
+        <div class="container">
+            <h3 class="section-title text-center mb-5" data-aos="fade-up">Featured Projects</h3>
+            
+            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="200">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="bg-dark text-white p-5 rounded" style="height: 400px;">
+                            <div class="row h-100 align-items-center">
+                                <div class="col-md-6">
+                                    <h2>EventPulse</h2>
+                                    <p>Full-stack event management platform with secure authentication and QR code verification.</p>
+                                    <div class="d-flex gap-2 mb-3">
+                                        <span class="badge bg-primary">Java Spring Boot</span>
+                                        <span class="badge bg-success">MySQL</span>
+                                        <span class="badge bg-info">JavaScript</span>
+                                    </div>
+                                    <a href="about.html#projects" class="btn btn-light mt-3">View Details</a>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <i class="fas fa-calendar-check fa-10x text-white-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-dark text-white p-5 rounded" style="height: 400px;">
+                            <div class="row h-100 align-items-center">
+                                <div class="col-md-6">
+                                    <h2>Highlands Bistro</h2>
+                                    <p>Data analysis project that processed over 8,500 data points to optimize restaurant performance.</p>
+                                    <div class="d-flex gap-2 mb-3">
+                                        <span class="badge bg-warning text-dark">Python</span>
+                                        <span class="badge bg-danger">SQL</span>
+                                        <span class="badge bg-secondary">Pandas</span>
+                                    </div>
+                                    <a href="about.html#projects" class="btn btn-light mt-3">View Details</a>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <i class="fas fa-chart-line fa-10x text-white-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="mb-3">Looking for a Software Engineering Intern?</h2>
+                <p>I'm currently seeking internship opportunities to apply my skills and further develop my expertise in software engineering.</p>
+                <div class="cta-buttons">
+                    <a href="resume.html" class="btn btn-cta">View Resume</a>
+                    <a href="contact.html" class="btn btn-cta">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="https://www.linkedin.com/in/azib-malik" class="text-white me-3" target="_blank">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="mailto:amalik7@cs.washington.edu" class="text-white me-3">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+                <a href="tel:425-785-3031" class="text-white">
+                    <i class="fas fa-phone fa-2x"></i>
+                </a>
+            </div>
+            <p>Azib Malik, Updated April 2025</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        });
+    </script>
+</body>
+</html>
