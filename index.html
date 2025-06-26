@@ -195,6 +195,46 @@
             color: white;
             transform: translateY(-5px);
         }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 60px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            height: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .carousel-control-prev {
+            left: -80px;
+        }
+        
+        .carousel-control-next {
+            right: -80px;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        /* Add responsive behavior for smaller screens */
+        @media (max-width: 768px) {
+            .carousel-control-prev {
+                left: 10px;
+            }
+            
+            .carousel-control-next {
+                right: 10px;
+            }
+            
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 40px;
+                height: 40px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -268,7 +308,7 @@
                 <div class="col-md-8 text-center" data-aos="fade-up">
                     <h3 class="section-title">Welcome to My Portfolio</h3>
                     <div class="intro-card p-4">
-                        <p>Hello! I am a current sophomore student at the University of Washington Paul G. Allen School of Computer Science & Engineering, pursuing a B.S. in Computer Science with a Minor in Business.</p>
+                        <p>Hello! I am a current Rising Junior student at the University of Washington Paul G. Allen School of Computer Science & Engineering, pursuing a B.S. in Computer Science with a Minor in Business.</p>
                         <p>I am currently looking for a role as an Intern in the tech industry, primarily in software engineering. I have experience with Java Spring Boot, JavaScript, Python, and various frameworks and libraries.</p>
                         <p>Feel free to explore my portfolio to learn more about my projects, skills, and experience. Thanks for visiting!</p>
                     </div>
@@ -287,11 +327,12 @@
                         <span class="skill-bubble">Java</span>
                         <span class="skill-bubble">Python</span>
                         <span class="skill-bubble">JavaScript</span>
-                        <span class="skill-bubble">Spring Boot</span>
+                        <span class="skill-bubble">C++</span>
                         <span class="skill-bubble">SQL</span>
-                        <span class="skill-bubble">React</span>
+                        <span class="skill-bubble">React.js</span>
                         <span class="skill-bubble">Node.js</span>
                         <span class="skill-bubble">REST APIs</span>
+                        <span class="skill-bubble">And More!</span>
                     </div>
                 </div>
             </div>
@@ -342,6 +383,7 @@
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -352,8 +394,10 @@
                                     <p>Full-stack event management platform with secure authentication and QR code verification.</p>
                                     <div class="d-flex gap-2 mb-3">
                                         <span class="badge bg-primary">Java Spring Boot</span>
-                                        <span class="badge bg-success">MySQL</span>
                                         <span class="badge bg-info">JavaScript</span>
+                                        <span class="badge bg-success">MySQL</span>
+                                        <span class="badge bg-secondary">Bootstrap 5</span>
+                                        <span class="badge bg-danger">Spring Security</span>
                                     </div>
                                     <a href="about.html#projects" class="btn btn-light mt-3">View Details</a>
                                 </div>
@@ -367,12 +411,14 @@
                         <div class="bg-dark text-white p-5 rounded" style="height: 400px;">
                             <div class="row h-100 align-items-center">
                                 <div class="col-md-6">
-                                    <h2>Highlands Bistro</h2>
+                                    <h2>"ZOQ" Restaurant</h2>
                                     <p>Data analysis project that processed over 8,500 data points to optimize restaurant performance.</p>
                                     <div class="d-flex gap-2 mb-3">
-                                        <span class="badge bg-warning text-dark">Python</span>
                                         <span class="badge bg-danger">SQL</span>
+                                        <span class="badge bg-warning text-dark">Python</span>
                                         <span class="badge bg-secondary">Pandas</span>
+                                        <span class="badge bg-success">Excel</span>
+                                        <span class="badge bg-info">Jupyter Notebook</span>
                                     </div>
                                     <a href="about.html#projects" class="btn btn-light mt-3">View Details</a>
                                 </div>
@@ -382,6 +428,26 @@
                             </div>
                         </div>
                     </div>
+                    <div class="carousel-item">
+                    <div class="bg-dark text-white p-5 rounded" style="height: 400px;">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-md-6">
+                                <h2>Portfolio Website</h2>
+                                <p>Modern, responsive personal portfolio website built from scratch with custom animations and interactive features.</p>
+                                <div class="d-flex gap-2 mb-3">
+                                    <span class="badge bg-primary">HTML5</span>
+                                    <span class="badge bg-info">CSS3</span>
+                                    <span class="badge bg-warning text-dark">JavaScript</span>
+                                    <span class="badge bg-success">Bootstrap 5</span>
+                                </div>
+                                <a href="about.html#projects" class="btn btn-light mt-3">View Details</a>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <i class="fas fa-laptop-code fa-10x text-white-50"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -423,7 +489,7 @@
                     <i class="fas fa-phone fa-2x"></i>
                 </a>
             </div>
-            <p>Azib Malik, Updated April 2025</p>
+            <p>Azib Malik, Updated June 25, 2025</p>
         </div>
     </footer>
 
