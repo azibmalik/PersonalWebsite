@@ -131,7 +131,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Your Name**
+**Azib Malik**
 - LinkedIn: www.linkedin.com/in/azib-malik
 - Email: amalik7@cs.washington.edu/amalik7@uw.edu
 - Website: https://students.washington.edu/amalik7/index.html
