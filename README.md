@@ -111,9 +111,8 @@ personal-website/
 Visit the live website: https://students.washington.edu/amalik7/index.html
 
 ## 📸 Screenshots
-
-<img width="1510" alt="home" src="https://github.com/user-attachments/assets/3b907f90-79f8-4ee1-8ed4-90a24c9a1fa1" />
-<img width="1511" alt="about" src="https://github.com/user-attachments/assets/b06ef6a0-015a-4e0a-a0a3-18ffa7809d06" />
+<img width="1512" height="884" alt="Home Page" src="https://github.com/user-attachments/assets/a06e37bb-c2ae-4d9b-9c6e-6a06716dda51" />
+<img width="1512" height="884" alt="About Me" src="https://github.com/user-attachments/assets/831935c4-a850-4bbb-bf15-1860a2d40c7c" />
 <img width="1512" alt="contact" src="https://github.com/user-attachments/assets/5dcd16dc-5d77-4e60-bfde-39e97ab6271d" />
 
 
